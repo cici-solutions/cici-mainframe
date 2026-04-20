@@ -1,0 +1,28 @@
+{{!< default}}
+
+<div class="container">
+    <section class="archive-header">
+        <div class="section-label">SYSTEM ARCHIVE</div>
+
+        <div class="archive-meta-panel">
+            <div>NODE: CICI SOLUTIONS</div>
+            <div>TYPE: COMPLETE ENTRY LOG</div>
+            <div>STATUS: ACTIVE</div>
+        </div>
+
+        <h1 class="archive-title">Archive</h1>
+        <p class="archive-description">
+            Complete record of published entries across engineering, operations, product, and strategy.
+        </p>
+    </section>
+
+    <section class="entry-list-section">
+        <div class="section-label section-label--muted">ALL ENTRIES</div>
+
+        <div class="entry-list">
+            {{#foreach posts}}
+                {{> "entry-row"}}
+            {{/foreach}}
+        </div>
+    </section>
+</div>

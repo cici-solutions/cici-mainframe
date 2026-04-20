@@ -15,6 +15,9 @@
   --color-code-bg: #2F2F2F;
   --color-note-bg: #383838;
 
+  --color-bg-deep: #1f1f1f;
+  --color-panel-hover: #4a4a4a;
+    
   --fs-00: 0.75rem;
   --fs-0: 0.875rem;
   --fs-1: 1rem;
@@ -48,4 +51,9 @@
   --content-max: 72ch;
 
   --transition-fast: 120ms ease-out;
+}
+.featured-entry {
+  padding: var(--space-5);
+  border: var(--border-thin);
+  background: var(--color-bg-deep);
 }

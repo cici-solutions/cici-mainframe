@@ -1,17 +1,35 @@
 {{!< default}}
 
 <div class="container">
-    <section class="system-intro">
-        <p>&gt; knowledge system initialized.</p>
-        <p>&gt; engineering notes, product thinking, field reports.</p>
-        <p>&gt; current mode: public</p>
-    </section>
+    {{> "system-intro"}}
 
     {{#get "posts" filter="featured:true" limit="1" include="tags,authors"}}
         {{#if posts}}
             {{#foreach posts}}
                 <section class="featured-entry">
                     <div class="section-label">FEATURED ENTRY</div>
+
+                    <div class="entry-meta">
+                        <span>{{date format="YYYY-MM-DD"}}</span>
+                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
+                        <span>ENTRY {{id}}</span>
+                    </div>
+
+                    <h1 class="entry-title">
+                        <a href="{{url}}">{{title}}</a>
+                    </h1>
+
+                    {{#if excerpt}}
+                        <p class="entry-excerpt">{{excerpt}}</p>
+                    {{/if}}
+
+                    <a class="entry-link" href="{{url}}">read entry →</a>
+                </section>
+            {{/foreach}}
+        {{else}}
+            {{#foreach posts limit="1"}}
+                <section class="featured-entry">
+                    <div class="section-label">LATEST ENTRY</div>
 
                     <div class="entry-meta">
                         <span>{{date format="YYYY-MM-DD"}}</span>
@@ -37,9 +55,15 @@
         <div class="section-label section-label--muted">LATEST ENTRIES</div>
 
         <div class="entry-list">
-            {{#foreach posts}}
-                {{> "entry-row"}}
-            {{/foreach}}
+            {{#get "posts" filter="featured:false" limit="10" include="tags,authors"}}
+                {{#foreach posts}}
+                    {{> "entry-row"}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+
+        <div class="archive-utility-row">
+            <a href="/archive/">archives →</a>
         </div>
     </section>
 </div>
