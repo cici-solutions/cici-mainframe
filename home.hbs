@@ -16,7 +16,7 @@
                     <div class="entry-meta">
                         <span>{{date format="YYYY-MM-DD"}}</span>
                         {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
-                        <span>ENTRY {{@number}}</span>
+                        <span>ENTRY {{id}}</span>
                     </div>
 
                     <h1 class="entry-title">
@@ -38,17 +38,7 @@
 
         <div class="entry-list">
             {{#foreach posts}}
-                <article class="entry-row">
-                    <div class="entry-meta">
-                        <span>{{date format="YYYY-MM-DD"}}</span>
-                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
-                        <span>ENTRY {{@number}}</span>
-                    </div>
-
-                    <h2 class="entry-row-title">
-                        <a href="{{url}}">{{title}}</a>
-                    </h2>
-                </article>
+                {{> "entry-row"}}
             {{/foreach}}
         </div>
     </section>

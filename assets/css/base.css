@@ -296,3 +296,122 @@ a:focus {
     font-size: var(--fs-1);
   }
 }
+/* Entry row excerpt */
+.entry-row-excerpt {
+  margin: var(--space-2) 0 0;
+  font-size: var(--fs-1);
+  color: var(--color-text-muted);
+}
+
+/* Tag archive */
+.tag-header {
+  margin-bottom: var(--space-7);
+}
+
+.tag-meta-panel {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  border: var(--border-thin);
+  background: var(--color-panel);
+  font-family: var(--font-mono);
+  font-size: var(--fs-0);
+  color: var(--color-text-muted);
+}
+
+.tag-title {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-5);
+  line-height: var(--lh-tight);
+}
+
+.tag-description {
+  margin: 0;
+  font-size: var(--fs-2);
+  color: var(--color-text);
+}
+
+/* Post footer */
+.post-footer {
+  padding-top: var(--space-5);
+  border-top: var(--border-thin);
+}
+
+.post-archive-link {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-0);
+}
+
+/* Prev / next nav */
+.prev-next-nav {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: var(--border-thin);
+}
+
+.prev-next-nav__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-0);
+}
+
+.prev-link,
+.next-link {
+  flex: 1;
+}
+
+.next-link {
+  text-align: right;
+}
+
+/* Page view */
+.page-view .post-header {
+  margin-bottom: var(--space-6);
+}
+
+/* Better blockquote */
+.gh-content blockquote {
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-accent);
+  color: var(--color-text-muted);
+}
+
+/* Lists */
+.gh-content ul,
+.gh-content ol {
+  padding-left: 1.25rem;
+}
+
+/* Tables basic safeguard */
+.gh-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-0);
+}
+
+.gh-content th,
+.gh-content td {
+  padding: var(--space-3);
+  border: var(--border-thin);
+  text-align: left;
+}
+
+/* Responsive additions */
+@media (max-width: 768px) {
+  .prev-next-nav__inner {
+    flex-direction: column;
+  }
+
+  .next-link {
+    text-align: left;
+  }
+
+  .tag-title {
+    font-size: 2rem;
+  }
+}

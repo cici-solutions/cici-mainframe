@@ -4,12 +4,7 @@
 <article class="post-view">
     <div class="container container--narrow">
         <header class="post-header">
-            <div class="post-meta-panel">
-                <div>FILE: {{slug}}.txt</div>
-                <div>PUBLISHED: {{date format="YYYY-MM-DD"}}</div>
-                {{#primary_tag}}<div>CATEGORY: {{name}}</div>{{/primary_tag}}
-                <div>READING TIME: {{reading_time}}</div>
-            </div>
+            {{> "post-meta"}}
 
             <h1 class="post-title">{{title}}</h1>
 
@@ -22,16 +17,8 @@
             {{content}}
         </section>
 
-        <footer class="post-footer">
-            {{#if tags}}
-                <div class="post-tags">
-                    TAGS:
-                    {{#foreach tags}}
-                        <a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}
-                    {{/foreach}}
-                </div>
-            {{/if}}
-        </footer>
+        {{> "article-footer"}}
+        {{> "prev-next"}}
     </div>
 </article>
 {{/post}}

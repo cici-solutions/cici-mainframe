@@ -1,0 +1,15 @@
+<nav class="prev-next-nav">
+    <div class="prev-next-nav__inner">
+        <div class="prev-link">
+            {{#prev_post}}
+                <a href="{{url}}">← previous entry</a>
+            {{/prev_post}}
+        </div>
+
+        <div class="next-link">
+            {{#next_post}}
+                <a href="{{url}}">next entry →</a>
+            {{/next_post}}
+        </div>
+    </div>
+</nav>

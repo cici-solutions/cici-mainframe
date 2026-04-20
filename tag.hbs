@@ -1,0 +1,34 @@
+{{!< default}}
+
+{{#tag}}
+<div class="container">
+    <section class="tag-header">
+        <div class="section-label">TAG ARCHIVE</div>
+
+        <div class="tag-meta-panel">
+            <div>TAG: {{name}}</div>
+            {{#if description}}
+                <div>DESCRIPTION: {{description}}</div>
+            {{/if}}
+        </div>
+
+        <h1 class="tag-title">{{name}}</h1>
+
+        {{#if description}}
+            <p class="tag-description">{{description}}</p>
+        {{/if}}
+    </section>
+</div>
+{{/tag}}
+
+<div class="container">
+    <section class="entry-list-section">
+        <div class="section-label section-label--muted">ENTRIES</div>
+
+        <div class="entry-list">
+            {{#foreach posts}}
+                {{> "entry-row"}}
+            {{/foreach}}
+        </div>
+    </section>
+</div>

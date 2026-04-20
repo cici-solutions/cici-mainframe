@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+<article class="page-view">
+    <div class="container container--narrow">
+        <header class="post-header">
+            <div class="post-meta-panel">
+                <div>FILE: {{slug}}.txt</div>
+                <div>TYPE: PAGE</div>
+                <div>PUBLISHED: {{date format="YYYY-MM-DD"}}</div>
+            </div>
+
+            <h1 class="post-title">{{title}}</h1>
+
+            {{#if excerpt}}
+                <p class="post-excerpt">{{excerpt}}</p>
+            {{/if}}
+        </header>
+
+        <section class="post-content gh-content">
+            {{content}}
+        </section>
+    </div>
+</article>
+{{/post}}

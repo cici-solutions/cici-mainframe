@@ -1,0 +1,15 @@
+<article class="entry-row">
+    <div class="entry-meta">
+        <span>{{date format="YYYY-MM-DD"}}</span>
+        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
+        <span>ENTRY {{id}}</span>
+    </div>
+
+    <h2 class="entry-row-title">
+        <a href="{{url}}">{{title}}</a>
+    </h2>
+
+    {{#if excerpt}}
+        <p class="entry-row-excerpt">{{excerpt words="18"}}</p>
+    {{/if}}
+</article>
