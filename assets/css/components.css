@@ -34,9 +34,32 @@
   text-transform: uppercase;
 }
 
-.site-nav {
-  font-family: var(--font-mono);
+.site-nav .nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav .nav li {
+  margin: 0;
+}
+
+.site-nav .nav a {
   font-size: var(--fs-0);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.site-nav .nav-current a,
+.site-nav .nav a:hover,
+.site-nav .nav a:focus {
+  color: var(--color-accent);
 }
 
 .nav-list {

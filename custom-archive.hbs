@@ -2,7 +2,7 @@
 
 {{#post}}
 <article class="page-view page-view--archive">
-    <div class="container container--narrow">
+    <div class="container">
         <header class="post-header">
             <div class="post-meta-panel">
                 <div>FILE: archive.txt</div>
@@ -16,20 +16,24 @@
                 <p class="post-excerpt">{{excerpt}}</p>
             {{else}}
                 <p class="post-excerpt">
-                    Browse the complete publishing log and explore entries by topic, date, and author.
+                    Complete record of published entries across engineering, operations, product, and strategy.
                 </p>
             {{/if}}
         </header>
 
-        <section class="post-content gh-content">
-            {{content}}
-        </section>
+        {{#get "posts" limit="20" include="tags,authors"}}
+            <section class="entry-list-section">
+                <div class="section-label section-label--muted">ALL ENTRIES</div>
 
-        <footer class="post-footer">
-            <div class="post-archive-link">
-                <a href="/">view latest entries →</a>
-            </div>
-        </footer>
+                <div class="entry-list">
+                    {{#foreach posts}}
+                        {{> "entry-row"}}
+                    {{else}}
+                        {{> "empty-state" message="No entries available in the archive."}}
+                    {{/foreach}}
+                </div>
+            </section>
+        {{/get}}
     </div>
 </article>
 {{/post}}
