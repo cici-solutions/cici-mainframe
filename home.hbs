@@ -26,28 +26,6 @@
                     <a class="entry-link" href="{{url}}">read entry →</a>
                 </section>
             {{/foreach}}
-        {{else}}
-            {{#foreach posts limit="1"}}
-                <section class="featured-entry">
-                    <div class="section-label">LATEST ENTRY</div>
-
-                    <div class="entry-meta">
-                        <span>{{date format="YYYY-MM-DD"}}</span>
-                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
-                        <span>ENTRY {{id}}</span>
-                    </div>
-
-                    <h1 class="entry-title">
-                        <a href="{{url}}">{{title}}</a>
-                    </h1>
-
-                    {{#if excerpt}}
-                        <p class="entry-excerpt">{{excerpt}}</p>
-                    {{/if}}
-
-                    <a class="entry-link" href="{{url}}">read entry →</a>
-                </section>
-            {{/foreach}}
         {{/if}}
     {{/get}}
 
@@ -55,15 +33,17 @@
         <div class="section-label section-label--muted">LATEST ENTRIES</div>
 
         <div class="entry-list">
-            {{#get "posts" filter="featured:false" limit="10" include="tags,authors"}}
-                {{#foreach posts}}
-                    {{> "entry-row"}}
-                {{/foreach}}
-            {{/get}}
+            {{#foreach posts}}
+                {{> "entry-row"}}
+            {{else}}
+                {{> "empty-state" message="No published entries found in this node."}}
+            {{/foreach}}
         </div>
 
         <div class="archive-utility-row">
             <a href="/archive/">archives →</a>
         </div>
+
+        {{pagination}}
     </section>
 </div>

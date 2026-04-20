@@ -1,0 +1,35 @@
+{{#if prev}}
+<nav class="pagination-nav">
+    <div class="pagination-nav__inner">
+        <div class="pagination-nav__prev">
+            <a href="{{page_url prev}}">← newer entries</a>
+        </div>
+
+        <div class="pagination-nav__meta">
+            <span>PAGE {{page}} / {{pages}}</span>
+        </div>
+
+        <div class="pagination-nav__next">
+            {{#if next}}
+                <a href="{{page_url next}}">older entries →</a>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+{{else}}
+    {{#if next}}
+    <nav class="pagination-nav">
+        <div class="pagination-nav__inner">
+            <div class="pagination-nav__prev"></div>
+
+            <div class="pagination-nav__meta">
+                <span>PAGE {{page}} / {{pages}}</span>
+            </div>
+
+            <div class="pagination-nav__next">
+                <a href="{{page_url next}}">older entries →</a>
+            </div>
+        </div>
+    </nav>
+    {{/if}}
+{{/if}}e

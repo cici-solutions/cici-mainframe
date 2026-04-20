@@ -7,9 +7,8 @@
 
         <div class="tag-meta-panel">
             <div>TAG: {{name}}</div>
-            {{#if description}}
-                <div>DESCRIPTION: {{description}}</div>
-            {{/if}}
+            {{#if description}}<div>DESCRIPTION: {{description}}</div>{{/if}}
+            <div>STATUS: ACTIVE</div>
         </div>
 
         <h1 class="tag-title">{{name}}</h1>
@@ -28,7 +27,11 @@
         <div class="entry-list">
             {{#foreach posts}}
                 {{> "entry-row"}}
+            {{else}}
+                {{> "empty-state" message="No entries found for this tag."}}
             {{/foreach}}
         </div>
+
+        {{pagination}}
     </section>
 </div>

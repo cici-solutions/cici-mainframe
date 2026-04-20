@@ -1,0 +1,32 @@
+{{!< default}}
+
+<div class="container">
+    <section class="archive-header">
+        <div class="section-label">ARCHIVE</div>
+
+        <div class="archive-meta-panel">
+            <div>NODE: PUBLIC ARCHIVE</div>
+            <div>TYPE: INDEX</div>
+            <div>STATUS: ACTIVE</div>
+        </div>
+
+        <h1 class="archive-title">All entries</h1>
+        <p class="archive-description">
+            Complete log of published notes, essays, and technical articles.
+        </p>
+    </section>
+
+    <section class="entry-list-section">
+        <div class="section-label section-label--muted">ENTRIES</div>
+
+        <div class="entry-list">
+            {{#foreach posts}}
+                {{> "entry-row"}}
+            {{else}}
+                {{> "empty-state" message="No entries available in the public archive."}}
+            {{/foreach}}
+        </div>
+
+        {{pagination}}
+    </section>
+</div>

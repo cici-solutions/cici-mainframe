@@ -1,28 +1,35 @@
 {{!< default}}
 
-<div class="container">
-    <section class="archive-header">
-        <div class="section-label">SYSTEM ARCHIVE</div>
+{{#post}}
+<article class="page-view page-view--archive">
+    <div class="container container--narrow">
+        <header class="post-header">
+            <div class="post-meta-panel">
+                <div>FILE: archive.txt</div>
+                <div>TYPE: SYSTEM PAGE</div>
+                <div>NODE: PUBLIC ARCHIVE</div>
+            </div>
 
-        <div class="archive-meta-panel">
-            <div>NODE: CICI SOLUTIONS</div>
-            <div>TYPE: COMPLETE ENTRY LOG</div>
-            <div>STATUS: ACTIVE</div>
-        </div>
+            <h1 class="post-title">{{title}}</h1>
 
-        <h1 class="archive-title">Archive</h1>
-        <p class="archive-description">
-            Complete record of published entries across engineering, operations, product, and strategy.
-        </p>
-    </section>
+            {{#if excerpt}}
+                <p class="post-excerpt">{{excerpt}}</p>
+            {{else}}
+                <p class="post-excerpt">
+                    Browse the complete publishing log and explore entries by topic, date, and author.
+                </p>
+            {{/if}}
+        </header>
 
-    <section class="entry-list-section">
-        <div class="section-label section-label--muted">ALL ENTRIES</div>
+        <section class="post-content gh-content">
+            {{content}}
+        </section>
 
-        <div class="entry-list">
-            {{#foreach posts}}
-                {{> "entry-row"}}
-            {{/foreach}}
-        </div>
-    </section>
-</div>
+        <footer class="post-footer">
+            <div class="post-archive-link">
+                <a href="/">view latest entries →</a>
+            </div>
+        </footer>
+    </div>
+</article>
+{{/post}}
