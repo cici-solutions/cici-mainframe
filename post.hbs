@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{#post}}
+<article class="post-view">
+    <div class="container container--narrow">
+        <header class="post-header">
+            <div class="post-meta-panel">
+                <div>FILE: {{slug}}.txt</div>
+                <div>PUBLISHED: {{date format="YYYY-MM-DD"}}</div>
+                {{#primary_tag}}<div>CATEGORY: {{name}}</div>{{/primary_tag}}
+                <div>READING TIME: {{reading_time}}</div>
+            </div>
+
+            <h1 class="post-title">{{title}}</h1>
+
+            {{#if excerpt}}
+                <p class="post-excerpt">{{excerpt}}</p>
+            {{/if}}
+        </header>
+
+        <section class="post-content gh-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+            {{#if tags}}
+                <div class="post-tags">
+                    TAGS:
+                    {{#foreach tags}}
+                        <a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}
+                    {{/foreach}}
+                </div>
+            {{/if}}
+        </footer>
+    </div>
+</article>
+{{/post}}

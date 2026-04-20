@@ -1,0 +1,55 @@
+{{!< default}}
+
+<div class="container">
+    <section class="system-intro">
+        <p>&gt; knowledge system initialized.</p>
+        <p>&gt; engineering notes, product thinking, field reports.</p>
+        <p>&gt; current mode: public</p>
+    </section>
+
+    {{#get "posts" filter="featured:true" limit="1" include="tags,authors"}}
+        {{#if posts}}
+            {{#foreach posts}}
+                <section class="featured-entry">
+                    <div class="section-label">FEATURED ENTRY</div>
+
+                    <div class="entry-meta">
+                        <span>{{date format="YYYY-MM-DD"}}</span>
+                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
+                        <span>ENTRY {{@number}}</span>
+                    </div>
+
+                    <h1 class="entry-title">
+                        <a href="{{url}}">{{title}}</a>
+                    </h1>
+
+                    {{#if excerpt}}
+                        <p class="entry-excerpt">{{excerpt}}</p>
+                    {{/if}}
+
+                    <a class="entry-link" href="{{url}}">read entry →</a>
+                </section>
+            {{/foreach}}
+        {{/if}}
+    {{/get}}
+
+    <section class="entry-list-section">
+        <div class="section-label section-label--muted">LATEST ENTRIES</div>
+
+        <div class="entry-list">
+            {{#foreach posts}}
+                <article class="entry-row">
+                    <div class="entry-meta">
+                        <span>{{date format="YYYY-MM-DD"}}</span>
+                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
+                        <span>ENTRY {{@number}}</span>
+                    </div>
+
+                    <h2 class="entry-row-title">
+                        <a href="{{url}}">{{title}}</a>
+                    </h2>
+                </article>
+            {{/foreach}}
+        </div>
+    </section>
+</div>
