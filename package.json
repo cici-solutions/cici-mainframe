@@ -1,14 +1,14 @@
 {
-  "name": "cici-mainframe",
-  "description": "A minimal Ghost theme inspired by IBM terminals and DOS-era interfaces.",
-  "version": "1.0.0",
-  "author": {
-    "name": "Andrea / CICI Solutions",
-    "email": "hello@example.com",
-    "url": "https://cici.solutions"
-  },
-  "engines": {
-    "ghost": ">=5.0.0",
-    "ghost-api": "v5"
-  }
+    "name": "cici-mainframe",
+    "description": "A minimal Ghost theme inspired by IBM terminals and DOS-era interfaces.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Andrea / CICI Solutions",
+        "email": "hello@example.com",
+        "url": "https://cici.solutions"
+    },
+    "engines": {
+        "ghost": ">=5.0.0",
+        "ghost-api": "v5"
+    }
 }

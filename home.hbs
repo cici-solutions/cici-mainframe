@@ -3,29 +3,35 @@
 <div class="container">
     {{> "system-intro"}}
 
-    {{#get "posts" limit="1" include="tags,authors"}}
-        {{#foreach posts}}
-            {{> "featured-entry" label="LATEST ENTRY"}}
-        {{else}}
-            {{> "empty-state" message="No featured entry available."}}
-        {{/foreach}}
+    {{#get "posts" filter="featured:true" limit="all" include="tags,authors"}}
+        {{#if posts}}
+            <section class="featured-entries-section">
+                <div class="section-label">FEATURED ENTRIES</div>
+
+                <div class="featured-entries-list">
+                    {{#foreach posts}}
+                        {{> "featured-entry" label="FEATURED ENTRY"}}
+                    {{/foreach}}
+                </div>
+            </section>
+        {{/if}}
     {{/get}}
 
     <section class="entry-list-section">
         <div class="section-label section-label--muted">LATEST ENTRIES</div>
 
-        {{#get "posts" limit="10" page="1" include="tags,authors"}}
-            <div class="entry-list">
-                {{#foreach posts from="2"}}
-                    {{> "entry-row"}}
-                {{else}}
-                    {{> "empty-state" message="No published entries found in this node."}}
-                {{/foreach}}
-            </div>
-        {{/get}}
+        <div class="entry-list">
+            {{#foreach posts}}
+                {{> "entry-row"}}
+            {{else}}
+                {{> "empty-state" message="No published entries found in this node."}}
+            {{/foreach}}
+        </div>
 
         <div class="archive-utility-row">
             <a href="/archive/">archives →</a>
         </div>
+
+        {{pagination}}
     </section>
 </div>
