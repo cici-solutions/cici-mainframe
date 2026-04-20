@@ -1,20 +1,14 @@
 {{!< default}}
 
 <div class="container">
-    <section class="archive-header">
-        <div class="section-label">ARCHIVE</div>
-
-        <div class="archive-meta-panel">
-            <div>NODE: PUBLIC ARCHIVE</div>
-            <div>TYPE: INDEX</div>
-            <div>STATUS: ACTIVE</div>
-        </div>
-
-        <h1 class="archive-title">All entries</h1>
-        <p class="archive-description">
-            Complete log of published notes, essays, and technical articles.
-        </p>
-    </section>
+    {{> "archive-header"
+        label="ARCHIVE"
+        meta_1="NODE: PUBLIC ARCHIVE"
+        meta_2="TYPE: INDEX"
+        meta_3="STATUS: ACTIVE"
+        title="All entries"
+        description="Complete log of published notes, essays, and technical articles."
+    }}
 
     <section class="entry-list-section">
         <div class="section-label section-label--muted">ENTRIES</div>
