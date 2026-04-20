@@ -1,22 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{@site.locale}}">
-<head>
-    {{> "site-head"}}
-    {{ghost_head}}
-</head>
-<body class="{{body_class}}">
-    <a class="skip-link" href="#site-main">Skip to content</a>
+    <head>
+        {{> "site-head"}} {{ghost_head}}
+    </head>
+    <body class="{{body_class}}">
+        <a class="skip-link" href="#site-main">Skip to content</a>
 
-    <div class="site-shell">
-        {{> "header"}}
+        <div class="site-shell">
+            {{> "header"}}
 
-        <main id="site-main" class="site-main">
-            {{{body}}}
-        </main>
+            <main id="site-main" class="site-main">{{{body}}}</main>
 
-        {{> "footer"}}
-    </div>
+            {{> "footer"}}
+        </div>
 
-    {{ghost_foot}}
-</body>
+        {{ghost_foot}}
+    </body>
 </html>
