@@ -21,6 +21,10 @@
             {{/if}}
         </header>
 
+        <section class="post-content gh-content">
+            {{content}}
+        </section>
+
         {{#get "posts" limit="20" include="tags,authors"}}
             <section class="entry-list-section">
                 <div class="section-label section-label--muted">ALL ENTRIES</div>
