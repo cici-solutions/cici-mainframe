@@ -15,6 +15,7 @@
 .site-brand-wrap {
   display: grid;
   gap: var(--space-1);
+  min-width: 0;
 }
 
 .site-brand a {
@@ -34,6 +35,7 @@
 }
 
 .site-nav {
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: var(--fs-0);
 }
@@ -172,11 +174,6 @@
 .entry-row {
   padding: var(--space-4) var(--space-2);
   border-bottom: var(--border-thin);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.entry-row:hover {
-  background: rgba(255, 255, 255, 0.02);
 }
 
 .entry-meta {
@@ -198,6 +195,11 @@
 
 .entry-row-title a {
   display: inline-block;
+}
+
+.entry-row-title a:hover,
+.entry-row-title a:focus {
+  color: var(--color-accent);
 }
 
 .entry-row-excerpt {
