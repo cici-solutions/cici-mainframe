@@ -1,4 +1,6 @@
-{{!< default}} {{#post}}
+{{!< default}}
+
+{{#post}}
 <article class="page-view">
     <div class="container">
         <header class="post-header">
@@ -11,11 +13,25 @@
             <h1 class="post-title">{{title}}</h1>
 
             {{#if excerpt}}
-            <p class="post-excerpt">{{excerpt}}</p>
+                <p class="post-excerpt">{{excerpt}}</p>
+            {{/if}}
+
+            {{#if feature_image}}
+                <figure class="post-feature-image">
+                    <img
+                        src="{{img_url feature_image size="l"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    >
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
             {{/if}}
         </header>
 
-        <section class="post-content gh-content">{{content}}</section>
+        <section class="post-content gh-content">
+            {{content}}
+        </section>
     </div>
 </article>
 {{/post}}

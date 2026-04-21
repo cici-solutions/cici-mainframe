@@ -1,8 +1,6 @@
-{{!< default}}
-
-{{#post}}
+{{!< default}} {{#post}}
 <article class="page-view page-view--about">
-    <div class="container container--narrow">
+    <div class="container">
         <header class="post-header">
             <div class="post-meta-panel">
                 <div>FILE: about.txt</div>
@@ -13,17 +11,13 @@
             <h1 class="post-title">{{title}}</h1>
 
             {{#if excerpt}}
-                <p class="post-excerpt">{{excerpt}}</p>
+            <p class="post-excerpt">{{excerpt}}</p>
             {{else}}
-                <p class="post-excerpt">
-                    Digital systems, product thinking, engineering notes, and operational clarity.
-                </p>
+            <p class="post-excerpt">Digital systems, product thinking, engineering notes, and operational clarity.</p>
             {{/if}}
         </header>
 
-        <section class="post-content gh-content">
-            {{content}}
-        </section>
+        <section class="post-content gh-content">{{content}}</section>
 
         <footer class="post-footer">
             <div class="post-archive-link">
