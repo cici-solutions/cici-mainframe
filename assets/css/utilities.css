@@ -56,7 +56,7 @@
 .post-title,
 .archive-title,
 .tag-title {
-    text-wrap: balance;
+    text-wrap: normal;
 }
 
 .post-title,
@@ -74,11 +74,12 @@
     color: var(--color-text);
 }
 
-/* Same width as header/home container */
 .post-view .post-content,
 .page-view .post-content {
     width: 100%;
     max-width: none;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .post-footer {
@@ -290,7 +291,6 @@
     height: auto;
 }
 
-/* Required by Ghost validator, intentionally neutral */
 .gh-content .kg-width-wide {
     width: 100%;
     max-width: 100%;
