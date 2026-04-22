@@ -80,10 +80,11 @@
     max-width: 60ch;
 }
 
-.page-view .post-content,
-.post-view .post-content {
+.post-view .post-content,
+.page-view .post-content {
     max-width: var(--reading-max);
 }
+
 .post-footer {
     padding-top: var(--space-5);
     margin-top: var(--space-6);
@@ -258,6 +259,41 @@
     text-transform: uppercase;
 }
 
+.post-feature-image {
+    margin: var(--space-5) 0 0;
+}
+
+.post-feature-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: var(--border-thin);
+}
+
+.post-feature-image figcaption {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    color: var(--color-text-muted);
+}
+
+.gh-content .kg-card,
+.gh-content figure {
+    max-width: 100%;
+}
+
+.gh-content .kg-image-card,
+.gh-content .kg-gallery-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+.gh-content .kg-image,
+.gh-content .kg-gallery-container {
+    width: 100%;
+    height: auto;
+}
+
 .gh-content .kg-width-wide {
     width: min(100vw - 2rem, var(--wide-media-max));
     max-width: var(--wide-media-max);
@@ -272,16 +308,23 @@
     transform: translateX(-50%);
 }
 
+.gh-content .kg-width-wide .kg-image,
+.gh-content .kg-width-full .kg-image,
 .gh-content .kg-width-wide img,
 .gh-content .kg-width-full img,
-.gh-content .kg-width-wide .kg-image,
-.gh-content .kg-width-full .kg-image {
+.gh-content .kg-width-wide .kg-gallery-container,
+.gh-content .kg-width-full .kg-gallery-container {
     width: 100%;
+    max-width: 100%;
 }
 
-.gh-content .kg-width-wide figcaption,
-.gh-content .kg-width-full figcaption {
+.gh-content .kg-width-wide figcaption {
     width: min(100% - 2rem, var(--container-max));
+    margin: var(--space-2) auto 0;
+}
+
+.gh-content .kg-width-full figcaption {
+    width: min(100% - 2rem, var(--wide-media-max));
     margin: var(--space-2) auto 0;
 }
 
@@ -343,6 +386,12 @@
         transform: none;
     }
 
+    .gh-content .kg-width-wide figcaption,
+    .gh-content .kg-width-full figcaption {
+        width: 100%;
+        margin: var(--space-2) 0 0;
+    }
+
     .post-feature-image {
         margin: var(--space-5) 0 0;
     }
@@ -358,6 +407,7 @@
         font-size: var(--fs-00);
         color: var(--color-text-muted);
     }
+
     .error-page {
         padding: var(--space-8) 0;
     }
