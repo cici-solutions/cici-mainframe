@@ -89,7 +89,7 @@
     --border-thin: 1px solid var(--color-border);
 
     --container-max: 1120px;
-    --reading-max: 90ch;
+    --reading-max: 100ch;
     --wide-media-max: 1400px;
     --full-media-max: 100vw;
 
