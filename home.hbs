@@ -3,7 +3,7 @@
 <div class="container">
     {{> "system-intro"}}
 
-    {{#get "posts" filter="featured:true" limit="all" include="tags,authors"}}
+    {{#get "posts" filter="featured:true" limit="4" include="tags,authors"}}
         {{#if posts}}
             <section class="featured-entries-section">
                 <div class="section-label">FEATURED ENTRIES</div>
