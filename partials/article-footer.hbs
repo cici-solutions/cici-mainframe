@@ -1,0 +1,14 @@
+<footer class="post-footer">
+    {{#if tags}}
+        <div class="post-tags">
+            <span class="post-tags__label">TAGS:</span>
+            {{#foreach tags}}
+                <a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}
+            {{/foreach}}
+        </div>
+    {{/if}}
+
+    <div class="post-archive-link">
+        <a href="/archive/">back to archive</a>
+    </div>
+</footer>

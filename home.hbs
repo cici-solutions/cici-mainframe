@@ -1,35 +1,19 @@
 {{!< default}}
 
 <div class="container">
-    <section class="system-intro">
-        <p>&gt; knowledge system initialized.</p>
-        <p>&gt; engineering notes, product thinking, field reports.</p>
-        <p>&gt; current mode: public</p>
-    </section>
+    {{> "system-intro"}}
 
-    {{#get "posts" filter="featured:true" limit="1" include="tags,authors"}}
+    {{#get "posts" filter="featured:true" limit="all" include="tags,authors"}}
         {{#if posts}}
-            {{#foreach posts}}
-                <section class="featured-entry">
-                    <div class="section-label">FEATURED ENTRY</div>
+            <section class="featured-entries-section">
+                <div class="section-label">FEATURED ENTRIES</div>
 
-                    <div class="entry-meta">
-                        <span>{{date format="YYYY-MM-DD"}}</span>
-                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
-                        <span>ENTRY {{@number}}</span>
-                    </div>
-
-                    <h1 class="entry-title">
-                        <a href="{{url}}">{{title}}</a>
-                    </h1>
-
-                    {{#if excerpt}}
-                        <p class="entry-excerpt">{{excerpt}}</p>
-                    {{/if}}
-
-                    <a class="entry-link" href="{{url}}">read entry →</a>
-                </section>
-            {{/foreach}}
+                <div class="featured-entries-list">
+                    {{#foreach posts}}
+                        {{> "featured-entry" label="FEATURED ENTRY"}}
+                    {{/foreach}}
+                </div>
+            </section>
         {{/if}}
     {{/get}}
 
@@ -38,18 +22,16 @@
 
         <div class="entry-list">
             {{#foreach posts}}
-                <article class="entry-row">
-                    <div class="entry-meta">
-                        <span>{{date format="YYYY-MM-DD"}}</span>
-                        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
-                        <span>ENTRY {{@number}}</span>
-                    </div>
-
-                    <h2 class="entry-row-title">
-                        <a href="{{url}}">{{title}}</a>
-                    </h2>
-                </article>
+                {{> "entry-row"}}
+            {{else}}
+                {{> "empty-state" message="No published entries found in this node."}}
             {{/foreach}}
         </div>
+
+        <div class="archive-utility-row">
+            <a href="/archive/">archives →</a>
+        </div>
+
+        {{pagination}}
     </section>
 </div>

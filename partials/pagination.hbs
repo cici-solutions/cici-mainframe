@@ -1,0 +1,21 @@
+{{#if pages}}
+<nav class="pagination-nav" aria-label="Pagination">
+    <div class="pagination-nav__inner">
+        <div class="pagination-nav__prev">
+            {{#if prev}}
+            <a href="{{page_url prev}}">← newer entries</a>
+            {{/if}}
+        </div>
+
+        <div class="pagination-nav__meta">
+            <span>PAGE {{page}} / {{pages}}</span>
+        </div>
+
+        <div class="pagination-nav__next">
+            {{#if next}}
+            <a href="{{page_url next}}">older entries →</a>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+{{/if}}

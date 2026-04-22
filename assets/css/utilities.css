@@ -1,0 +1,424 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: var(--space-4);
+    z-index: 1000;
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+}
+
+.skip-link:focus {
+    top: var(--space-3);
+}
+
+.u-muted {
+    color: var(--color-text-muted);
+}
+
+.u-mono {
+    font-family: var(--font-mono);
+}
+
+.u-accent {
+    color: var(--color-accent);
+}
+
+.u-panel {
+    padding: var(--space-4);
+    border: var(--border-thin);
+    background: var(--color-panel);
+}
+
+.archive-utility-row {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: var(--space-4);
+    margin-top: var(--space-4);
+    border-top: var(--border-thin);
+    font-family: var(--font-mono);
+    font-size: var(--fs-0);
+}
+
+.post-header {
+    margin-bottom: var(--space-6);
+}
+
+.post-title,
+.entry-title,
+.archive-title,
+.tag-title {
+    margin: 0 0 var(--space-4);
+    line-height: var(--lh-tight);
+}
+
+.post-title,
+.archive-title,
+.tag-title {
+    text-wrap: normal;
+}
+
+.post-title,
+.entry-title,
+.archive-title,
+.tag-title {
+    font-size: var(--fs-5);
+}
+
+.archive-description,
+.tag-description {
+    margin: 0;
+    max-width: 60ch;
+    font-size: var(--fs-2);
+    color: var(--color-text);
+}
+
+.post-view .post-content,
+.page-view .post-content {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post-footer {
+    padding-top: var(--space-5);
+    margin-top: var(--space-6);
+    border-top: var(--border-thin);
+}
+
+.post-tags {
+    line-height: 1.6;
+    font-family: var(--font-mono);
+    font-size: var(--fs-0);
+    color: var(--color-text-muted);
+}
+
+.post-tags__label {
+    color: var(--color-text-muted);
+}
+
+.post-archive-link {
+    margin-top: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--fs-0);
+}
+
+.prev-next-nav {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: var(--border-thin);
+}
+
+.prev-next-nav__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--fs-0);
+}
+
+.prev-link,
+.next-link {
+    flex: 1;
+}
+
+.next-link {
+    text-align: right;
+}
+
+.gh-content {
+    font-size: var(--fs-1);
+}
+
+.gh-content h2 {
+    margin: var(--space-6) 0 var(--space-3);
+    font-size: var(--fs-4);
+    line-height: var(--lh-tight);
+}
+
+.gh-content h3 {
+    margin: var(--space-6) 0 var(--space-3);
+    font-size: var(--fs-3);
+    line-height: var(--lh-tight);
+}
+
+.gh-content h4 {
+    margin: var(--space-5) 0 var(--space-3);
+    font-size: var(--fs-2);
+    line-height: var(--lh-tight);
+}
+
+.gh-content p,
+.gh-content ul,
+.gh-content ol,
+.gh-content pre,
+.gh-content blockquote,
+.gh-content table,
+.gh-content figure {
+    margin: 0 0 var(--space-4);
+}
+
+.gh-content ul,
+.gh-content ol {
+    padding-left: 1.25rem;
+}
+
+.gh-content hr {
+    margin: var(--space-6) 0;
+    border: 0;
+    border-top: var(--border-thin);
+}
+
+.gh-content a {
+    color: var(--color-accent);
+}
+
+.gh-content a:hover,
+.gh-content a:focus {
+    color: var(--color-accent-hover);
+}
+
+.gh-content blockquote {
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--color-accent);
+    color: var(--color-text-muted);
+}
+
+.gh-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: var(--space-5) 0;
+    border: var(--border-thin);
+}
+
+.gh-content figcaption {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    color: var(--color-text-muted);
+}
+
+.gh-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+.gh-content th,
+.gh-content td {
+    padding: var(--space-3);
+    border: var(--border-thin);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.gh-content :not(pre) > code {
+    padding: 0.15rem 0.35rem;
+    border: var(--border-thin);
+    background: var(--color-panel);
+    font-family: var(--font-mono);
+    font-size: 0.95em;
+}
+
+.gh-content pre {
+    overflow-x: auto;
+    padding: var(--space-4);
+    border: var(--border-thin);
+    background: var(--color-code-bg);
+    font-family: var(--font-mono);
+    font-size: var(--fs-0);
+}
+
+.gh-content pre code {
+    display: block;
+    min-width: max-content;
+    color: var(--color-text);
+}
+
+.gh-content .kg-callout-card,
+.gh-content .mainframe-note {
+    margin: 0 0 var(--space-5);
+    padding: var(--space-4);
+    border: var(--border-thin);
+    background: var(--color-panel);
+}
+
+.gh-content .mainframe-note__label {
+    display: inline-block;
+    margin-bottom: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    color: var(--color-accent);
+    text-transform: uppercase;
+}
+
+.post-feature-image {
+    margin: var(--space-5) 0 0;
+}
+
+.post-feature-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: var(--border-thin);
+}
+
+.post-feature-image figcaption {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    color: var(--color-text-muted);
+}
+
+.gh-content .kg-card,
+.gh-content figure {
+    max-width: 100%;
+}
+
+.gh-content .kg-image-card,
+.gh-content .kg-gallery-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+.gh-content .kg-image,
+.gh-content .kg-gallery-container {
+    width: 100%;
+    height: auto;
+}
+
+.gh-content .kg-width-wide {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+}
+
+.gh-content .kg-width-full {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    transform: none;
+}
+
+.gh-content .kg-width-full .kg-image,
+.gh-content .kg-width-full img,
+.gh-content .kg-width-full .kg-gallery-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.gh-content .kg-width-full figcaption {
+    width: min(100% - 2rem, var(--wide-media-max));
+    margin: var(--space-2) auto 0;
+}
+
+@media (max-width: 768px) {
+    .site-footer__inner,
+    .site-header__inner,
+    .prev-next-nav__inner,
+    .pagination-nav__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-footer__right,
+    .next-link,
+    .pagination-nav__meta,
+    .pagination-nav__next {
+        text-align: left;
+    }
+
+    .archive-utility-row {
+        justify-content: flex-start;
+    }
+
+    .site-brand a {
+        font-size: var(--fs-3);
+    }
+
+    .site-brand-subline {
+        font-size: 0.6875rem;
+    }
+
+    .entry-row {
+        padding-inline: 0;
+    }
+
+    .post-title,
+    .entry-title,
+    .archive-title,
+    .tag-title {
+        font-size: 2rem;
+    }
+
+    .archive-description,
+    .tag-description {
+        font-size: var(--fs-1);
+    }
+
+    .post-content {
+        max-width: 100%;
+    }
+
+    .gh-content .kg-width-full {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .gh-content .kg-width-full figcaption {
+        width: 100%;
+        margin: var(--space-2) 0 0;
+    }
+
+    .post-feature-image {
+        margin: var(--space-5) 0 0;
+    }
+
+    .post-feature-image img {
+        width: 100%;
+        border: var(--border-thin);
+    }
+
+    .post-feature-image figcaption {
+        margin-top: var(--space-2);
+        font-family: var(--font-mono);
+        font-size: var(--fs-00);
+        color: var(--color-text-muted);
+    }
+
+    .error-page {
+        padding: var(--space-8) 0;
+    }
+
+    .error-page__actions {
+        margin-top: var(--space-5);
+        font-family: var(--font-mono);
+        font-size: var(--fs-0);
+    }
+
+    .post-content .kg-card,
+    .post-content figure {
+        max-width: 100%;
+    }
+
+    .post-content .kg-image-card,
+    .post-content .kg-gallery-card {
+        max-width: 100%;
+    }
+
+    .post-content .kg-image {
+        width: 100%;
+        height: auto;
+    }
+}

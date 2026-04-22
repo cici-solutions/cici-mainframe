@@ -1,0 +1,19 @@
+<section class="featured-entry">
+    <div class="section-label">{{#if label}}{{label}}{{else}}FEATURED ENTRY{{/if}}</div>
+
+    <div class="entry-meta">
+        <span>{{date format="YYYY-MM-DD"}}</span>
+        {{#primary_tag}}<span>{{name}}</span>{{/primary_tag}}
+        <span>ENTRY {{id}}</span>
+    </div>
+
+    <h2 class="entry-title">
+        <a href="{{url}}">{{title}}</a>
+    </h2>
+
+    {{#if excerpt}}
+    <p class="entry-excerpt">{{excerpt}}</p>
+    {{/if}}
+
+    <a class="entry-link" href="{{url}}">read entry →</a>
+</section>
