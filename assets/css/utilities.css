@@ -321,7 +321,7 @@
     margin: var(--space-2) auto 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .site-footer__inner,
     .site-header__inner,
     .prev-next-nav__inner,
