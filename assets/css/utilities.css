@@ -291,6 +291,13 @@
     height: auto;
 }
 
+.gh-content .kg-width-wide {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+}
 .gh-content .kg-width-full {
     width: 100vw;
     max-width: 100vw;
