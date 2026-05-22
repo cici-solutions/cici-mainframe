@@ -1,24 +1,15 @@
 {{!< default}}
 
 <div class="container">
-    {{> "archive-header"
-        label="ARCHIVE"
-        meta_1="NODE: PUBLIC ARCHIVE"
-        meta_2="TYPE: INDEX"
-        meta_3="STATUS: ACTIVE"
-        title="All entries"
-        description="Complete log of published notes, essays, and technical articles."
-    }}
+    {{> "archive-header" label="ARCHIVE" meta_1="NODE: PUBLIC ARCHIVE" meta_2="TYPE: INDEX" meta_3="STATUS: ACTIVE"
+    title="All entries" description="Complete log of published notes, essays, and technical articles." }}
 
     <section class="entry-list-section">
         <div class="section-label section-label--muted">ENTRIES</div>
 
         <div class="entry-list">
-            {{#foreach posts}}
-                {{> "entry-row"}}
-            {{else}}
-                {{> "empty-state" message="No entries available in the public archive."}}
-            {{/foreach}}
+            {{#foreach posts}} {{> "entry-row"}} {{else}} {{> "empty-state" message="No entries available in the public
+            archive."}} {{/foreach}}
         </div>
 
         {{pagination}}

@@ -1,79 +1,64 @@
-.system-intro@font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
+@font-face {
+    font-family: "Courier Prime";
+    src: url("../fonts/courier-prime-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
+    font-family: "Courier Prime";
+    src: url("../fonts/courier-prime-bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
+    font-family: "Courier Prime";
+    src: url("../fonts/courier-prime-italic.woff2") format("woff2");
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Courier Prime Regular";
-    src: url("../fonts/courierprime-regular.woff2") format("woff2");
+    font-family: "Courier Prime";
+    src: url("../fonts/courier-prime-bold-italic.woff2") format("woff2");
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
 :root {
-    --font-sans: "Courier Prime Regular", Inter, Arial, sans-serif;
-    --font-mono: "Courier Prime Regular", "JetBrains Mono", Consolas, monospace;
+    --font-sans: "Courier Prime", "Courier New", Courier, monospace;
+    --font-mono: "Courier Prime", "Courier New", Courier, monospace;
 
-    --color-bg: #3f3f3f;
-    --color-bg-deep: #3f3f3f;
-    --color-text: #fdfdfd;
+    --color-bg: #0d0d0d;
+    --color-bg-deep: #070707;
+    --color-text: #f2f2f2;
     --color-accent: #e9601e;
 
-    --color-panel: #3f3f3f;
-    --color-panel-2: #444444;
-    --color-panel-hover: #4a4a4a;
-    --color-border: #fdfdfd;
-    --color-text-muted: #fdfdfd;
-    --color-accent-hover: #ff8448;
-    --color-accent-dark: #c64e12;
-    --color-code-bg: #2f2f2f;
-    --color-scrollbar: #777777;
+    --color-panel: #141414;
+    --color-panel-2: #1b1b1b;
+    --color-panel-hover: #202020;
+    --color-border: #2d2d2d;
+    --color-text-muted: #9b9b9b;
+    --color-accent-hover: #ff7b3d;
+    --color-accent-dark: #b94613;
+    --color-code-bg: #111111;
+    --color-scrollbar: #555555;
+    --color-success: #7aa66d;
 
     --fs-00: 0.75rem;
     --fs-0: 0.875rem;
     --fs-1: 1rem;
     --fs-2: 1.125rem;
     --fs-3: 1.375rem;
-    --fs-4: 1.75rem;
-    --fs-5: 2.5rem;
+    --fs-4: 1.875rem;
+    --fs-5: clamp(2.35rem, 6vw, 4.75rem);
 
-    --lh-tight: 1.2;
+    --lh-tight: 1.05;
     --lh-meta: 1.4;
     --lh-body: 1.7;
 
@@ -85,16 +70,17 @@
     --space-6: 2rem;
     --space-7: 3rem;
     --space-8: 4rem;
+    --space-9: 6rem;
 
     --border-thin: 1px solid var(--color-border);
 
     --container-max: 1120px;
-    --reading-max: 100ch;
+    --reading-max: 86ch;
     --wide-media-max: 1400px;
     --full-media-max: 100vw;
 
-    --radius-sm: 2px;
-    --radius-md: 4px;
+    --radius-sm: 0;
+    --radius-md: 0;
 
     --transition-fast: 120ms ease-out;
 }

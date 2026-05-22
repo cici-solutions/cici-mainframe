@@ -1,35 +1,74 @@
 {{!< default}}
 
 <div class="container">
-    {{> "system-intro"}}
+    <section class="lab-hero" aria-labelledby="lab-hero-title">
+        <div class="lab-kicker">CICI SOLUTIONS / NOTES FROM THE LAB</div>
 
-    {{#get "posts" filter="featured:true" limit="4" include="tags,authors"}}
-        {{#if posts}}
-            <section class="featured-entries-section">
-                <div class="section-label">FEATURED ENTRIES</div>
+        <h1 id="lab-hero-title" class="lab-hero__title">
+            Software systems, automation workflows, AI-assisted operations, and technical publishing.
+        </h1>
 
-                <div class="featured-entries-list">
-                    {{#foreach posts}}
-                        {{> "featured-entry" label="FEATURED ENTRY"}}
-                    {{/foreach}}
-                </div>
-            </section>
-        {{/if}}
-    {{/get}}
+        <p class="lab-hero__description">
+            A dark technical studio for building, testing, documenting, and shipping lean digital infrastructure.
+        </p>
 
-    <section class="entry-list-section">
-        <div class="section-label section-label--muted">LATEST ENTRIES</div>
+        <div class="lab-hero__actions" aria-label="Primary sections">
+            <a href="/projects/">projects →</a>
+            <a href="/archive/">writing →</a>
+            <a href="/about/">about →</a>
+        </div>
+    </section>
+
+    <section class="lab-section" aria-labelledby="systems-title">
+        <div class="section-label">SELECTED SYSTEMS</div>
+        <h2 id="systems-title" class="lab-section__title">Current operating nodes</h2>
+
+        <div class="system-card-grid">
+            <article class="system-card">
+                <div class="system-card__meta">NODE 01 / GHOST</div>
+                <h3 class="system-card__title">Technical publishing stack</h3>
+                <p class="system-card__text">
+                    Ghost theme, editorial architecture, structured archives, and performance-focused publishing.
+                </p>
+            </article>
+
+            <article class="system-card">
+                <div class="system-card__meta">NODE 02 / DEVOPS</div>
+                <h3 class="system-card__title">Engineering infrastructure</h3>
+                <p class="system-card__text">
+                    Docker, VPS hardening, monitoring, backups, deployment runbooks, and operational reliability.
+                </p>
+            </article>
+
+            <article class="system-card">
+                <div class="system-card__meta">NODE 03 / AI</div>
+                <h3 class="system-card__title">AI-assisted workflows</h3>
+                <p class="system-card__text">
+                    Editorial agents, automation experiments, internal tools, and practical AI systems for lean
+                    operators.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    {{#get "posts" filter="featured:true" limit="3" include="tags,authors"}} {{#if posts}}
+    <section class="lab-section featured-entries-section">
+        <div class="section-label">FEATURED NOTES</div>
+        <div class="featured-entries-list">{{#foreach posts}} {{> "featured-entry" label="LAB NOTE"}} {{/foreach}}</div>
+    </section>
+    {{/if}} {{/get}}
+
+    <section class="lab-section entry-list-section">
+        <div class="section-label section-label--muted">LATEST NOTES</div>
+        <h2 class="lab-section__title">Recent field reports</h2>
 
         <div class="entry-list">
-            {{#foreach posts}}
-                {{> "entry-row"}}
-            {{else}}
-                {{> "empty-state" message="No published entries found in this node."}}
+            {{#foreach posts}} {{> "entry-row"}} {{else}} {{> "empty-state" message="No lab notes found in this node."}}
             {{/foreach}}
         </div>
 
         <div class="archive-utility-row">
-            <a href="/archive/">archives →</a>
+            <a href="/archive/">open full archive →</a>
         </div>
 
         {{pagination}}

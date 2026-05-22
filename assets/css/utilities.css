@@ -56,14 +56,14 @@
 .post-title,
 .archive-title,
 .tag-title {
-    text-wrap: normal;
+    text-wrap: balance;
 }
 
 .post-title,
 .entry-title,
 .archive-title,
 .tag-title {
-    font-size: var(--fs-3);
+    font-size: var(--fs-5);
 }
 
 .archive-description,
@@ -74,12 +74,11 @@
     color: var(--color-text);
 }
 
+/* Same width as header/home container */
 .post-view .post-content,
 .page-view .post-content {
     width: 100%;
     max-width: none;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .post-footer {
@@ -291,6 +290,7 @@
     height: auto;
 }
 
+/* Required by Ghost validator, intentionally neutral */
 .gh-content .kg-width-wide {
     width: 100%;
     max-width: 100%;
@@ -321,7 +321,7 @@
     margin: var(--space-2) auto 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .site-footer__inner,
     .site-header__inner,
     .prev-next-nav__inner,
