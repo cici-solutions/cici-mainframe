@@ -52,14 +52,14 @@
 
     --color-bg: #3f3f3f;
     --color-bg-deep: #3f3f3f;
-    --color-text: #f0f0f0;
+    --color-text: #fdfdfd;
     --color-accent: #e9601e;
 
     --color-panel: #3f3f3f;
     --color-panel-2: #444444;
     --color-panel-hover: #4a4a4a;
-    --color-border: #f0f0f0;
-    --color-text-muted: #cfcfcf;
+    --color-border: #fdfdfd;
+    --color-text-muted: #fdfdfd;
     --color-accent-hover: #ff8448;
     --color-accent-dark: #c64e12;
     --color-code-bg: #2f2f2f;

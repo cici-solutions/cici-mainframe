@@ -63,7 +63,7 @@
 .entry-title,
 .archive-title,
 .tag-title {
-    font-size: var(--fs-5);
+    font-size: var(--fs-3);
 }
 
 .archive-description,
