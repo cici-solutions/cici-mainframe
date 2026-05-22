@@ -1,56 +1,56 @@
 .system-intro@font-face {
-    font-family: "IBM Plex Sans";
-    src: url("../fonts/ibm-plex-sans-regular.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "IBM Plex Sans";
-    src: url("../fonts/ibm-plex-sans-600.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "IBM Plex Sans";
-    src: url("../fonts/ibm-plex-sans-700.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("../fonts/ibm-plex-mono-regular.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("../fonts/ibm-plex-mono-500.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("../fonts/ibm-plex-mono-700.woff2") format("woff2");
+    font-family: "Courier Prime Regular";
+    src: url("../fonts/courierprime-regular.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
-    --font-sans: "IBM Plex Sans", Inter, Arial, sans-serif;
-    --font-mono: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+    --font-sans: "Courier Prime Regular", Inter, Arial, sans-serif;
+    --font-mono: "Courier Prime Regular", "JetBrains Mono", Consolas, monospace;
 
-    --color-bg: #494949;
+    --color-bg: #3f3f3f;
     --color-bg-deep: #3f3f3f;
     --color-text: #f0f0f0;
     --color-accent: #e9601e;
@@ -58,7 +58,7 @@
     --color-panel: #3f3f3f;
     --color-panel-2: #444444;
     --color-panel-hover: #4a4a4a;
-    --color-border: #e9601e;
+    --color-border: #f0f0f0;
     --color-text-muted: #cfcfcf;
     --color-accent-hover: #ff8448;
     --color-accent-dark: #c64e12;
